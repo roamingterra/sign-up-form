@@ -12,7 +12,8 @@ html, body{
     margin: 0;
 }
 
-#logo-section{
+/*Beginning of first half of page*/
+#logo-section{ 
     flex: 0.5 1 0;
     display: flex;
     flex-direction: column;
@@ -27,10 +28,10 @@ html, body{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 100px;
+    top: 154px;
     height: 100px;
     width: 100%;
-    background-color: rgba(215, 112, 9, 0.4);
+    background-color: rgb(233,128,10, 0.4);
 }
 
 .company-name{
@@ -58,3 +59,99 @@ footer{
 a{
     color: white;
 }
+
+/*Beginning of second half of page*/
+#sign-up-sheet-section{ 
+    display: flex;
+    flex-direction: column;
+}
+
+.section-1{
+    height: 35vh;
+    background-color: rgb(247, 247, 247);
+    color: black;
+}
+
+.section-2{
+    position: relative;
+    height: 30vh; 
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.section-3{
+    height: 35vh;
+    background-color: rgb(247, 247, 247);
+    color: black;
+}
+
+p{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 90px;
+    max-width: 1000px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    max-width: 700px;
+    margin: 0;
+}
+
+dd{
+    margin-left: 0;
+    padding-top: 20px;
+    padding-left: 40px;
+    font-size: 1.2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 20px;
+    gap: 5px;
+}
+
+.first-name, .email, .password{
+    /*float: left;*/
+}
+
+label{
+    font-size: .8rem;
+    /*display: block;*/
+}
+
+input{
+    width: 200px;
+}
+
+div[class*=row]{
+    display: flex;
+    gap: 50px;
+}
+
+span[class*=form]{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+button + div{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+button + div + div{
+    position: relative;
+    left: 25vw;
+    top: 130px;
+}
+
+button + div + div a{
+    color: black;
+}
+
