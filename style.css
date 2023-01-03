@@ -6,21 +6,25 @@
 html, body{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    /*flex-wrap: nowrap;*/
     height: 100%;
-    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     margin: 0;
+    flex-wrap: wrap;
+    font-family: "SpaceMono";
 }
 
 /*Beginning of first half of page*/
 #logo-section{ 
-    flex: 0.5 1 0;
+    flex: 1 1 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(images/bonfire.jpeg);
+    background: url(images/fire-edit.jpeg);
     background-size: cover;
-    color: white;
+    background-position: center;
+    width: 33vw;
 }
 
 .logo-area{
@@ -31,7 +35,8 @@ html, body{
     top: 154px;
     height: 100px;
     width: 100%;
-    background-color: rgb(233,128,10, 0.4);
+    background-color: rgb(218,51,48, 0.3);
+    color: #ff4e41;
 }
 
 .company-name{
@@ -48,12 +53,15 @@ html, body{
 }
 
 #sign-up-sheet-section{
-    flex: 1 1 0;
+    flex: 1 1 1;
+    width: 67vw;
+    min-width: 587px;
 }
 
 footer{
     position: absolute;
     top: 97%;
+    color: white;
 }
 
 a{
@@ -64,32 +72,49 @@ a{
 #sign-up-sheet-section{ 
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .section-1{
+    display: flex;
+    justify-content: center;
     height: 35vh;
-    background-color: rgb(247, 247, 247);
+    width: 100%;
+    /*background-color: rgb(247, 247, 247);*/
+    background-color: white;
     color: black;
+    background: linear-gradient(rgba(218, 51, 48, 0.3) 0 0) bottom/ 500px 2px no-repeat, white;
 }
 
 .section-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
     height: 30vh; 
+    width: 100%;
     background-color: white;
     color: black;
-    box-shadow: 5px 5px 5px lightgray;
+    background: linear-gradient(rgba(218, 51, 48, 0.3) 0 0) bottom/ 500px 2px no-repeat, white;
 }
 
 .section-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 35vh;
-    background-color: rgb(247, 247, 247);
+    width: 100%;
+    /*background-color: rgb(247, 247, 247);*/
+    background-color: white;
     color: black;
 }
 
 p{
+    /*text-align: center;*/
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 90px;
+    padding-top: 120px;
     max-width: 1000px;
     font-size: 1.2rem;
     font-weight: bold;
@@ -99,16 +124,17 @@ p{
 
 dd{
     margin-left: 0;
-    padding-top: 20px;
-    padding-left: 40px;
+    /*padding-top: 20px;
+    padding-left: 40px;*/
+    padding-bottom: 15px;
     font-size: 1.2rem;
 }
 
 form{
     display: flex;
     flex-direction: column;
-    padding-left: 40px;
-    padding-top: 20px;
+    /*padding-left: 40px;
+    padding-top: 20px;*/
     gap: 5px;
 }
 
@@ -118,11 +144,12 @@ form{
 
 label{
     font-size: .8rem;
+    color:rgb(39, 38, 38);
     /*display: block;*/
 }
 
 input{
-    width: 200px;
+    width: 250px;
 }
 
 div[class*=row]{
@@ -137,18 +164,35 @@ span[class*=form]{
 
 button{
     margin-top: 20px;
-    margin-left: 40px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #ff4e41;
+    /*background-color: rgb(218,51,48, 1);*/
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    /*margin-left: 40px;*/
+}
+
+button:hover{
+    background-color: #ff9e97;
+}
+
+button:active{
+    background-color: #ff4e41;
 }
 
 button + div{
-    margin-top: 20px;
-    margin-left: 40px;
+    /*margin-top: 20px;
+    margin-left: 40px;*/
 }
 
 button + div + div{
     position: relative;
-    left: 25vw;
-    top: 130px;
+    top: 90px;
+    text-align: center;
 }
 
 button + div + div a{
