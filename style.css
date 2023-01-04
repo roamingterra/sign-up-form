@@ -136,8 +136,49 @@ label{
     color:rgb(39, 38, 38);
 }
 
+.form-first-name > label::before,
+.form-last-name > label::before,
+.form-email > label::before,
+.form-password > label::before,
+.form-password-confirmation > label::before{
+    content: '* ';
+    color: black;
+}
+
 input{
     width: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: #ced0d4;
+    outline: none;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #feaea9 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:focus{
+    border-color: blue;
+    box-shadow:1px 1px 5px grey;
+}
+
+#password:invalid, #password_confirmation:invalid{
+    border-color: red;
+}
+
+#password:invalid::after{
+    content: 'Passwords do not match';
 }
 
 /*Positioning of form rows*/
