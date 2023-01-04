@@ -10,6 +10,7 @@ html, body{
     height: 100vh;
     margin: 0;
     font-family: "SpaceMono";
+    justify-content: center;
 }
 
 /*Beginning of first half of page*/
@@ -31,11 +32,11 @@ html, body{
     align-items: center;
     
     position: relative;
-    top: 154px;
+    top: 70px; /*154px*/ /*130px*/
     
     height: 100px;
     width: 100%;
-    background-color: rgb(218,51,48, 0.3);
+    background-color: rgb(218,51,48, 0.5);
     color: #ff4e41;
 }
 
@@ -67,7 +68,7 @@ a{
     display: flex;
     flex-direction: column;
     flex: 1 1 67vw;
-    min-height: 70vh;
+    min-height: 50vh; /*70vh*/
 
     align-items: center;
 }
@@ -76,11 +77,11 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100%;   
+    min-height: 100%;  
 }
 
 .section-1{
-    flex: 0.6 1 0;
+    flex: 0.4 1 0; /*0.6*/
     
     display: flex;
     justify-content: center;
@@ -88,6 +89,8 @@ a{
     background-color: white;
     color: black;
     background: linear-gradient(rgba(218, 51, 48, 0.3) 0 0) bottom/ 500px 2px no-repeat, white;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .section-2{
@@ -99,11 +102,11 @@ a{
     align-items: center;
     background-color: white;
     color: black;
-    background: linear-gradient(rgba(218, 51, 48, 0.3) 0 0) bottom/ 500px 2px no-repeat, white;
+    background: linear-gradient(rgba(218, 51, 48, 0.3) 0 0) bottom/ 500px 2px no-repeat, white; 
 }
 
 .section-3{
-    flex: 1 1 0;
+    flex: 0.7 1 0;
 
     display: flex;
     flex-direction: column;
@@ -118,6 +121,7 @@ p{
     font-weight: bold;
     max-width: 700px;
     margin: 0;
+    text-align: center;
 }
 
 dd{
@@ -138,7 +142,7 @@ label{
 }
 
 input{
-    width: 250px;
+    width: 200px;
 }
 
 div[class*=row]{
