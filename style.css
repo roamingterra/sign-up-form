@@ -6,21 +6,20 @@
 html, body{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
     margin: 0;
     font-family: "SpaceMono";
-    justify-content: center;
 }
 
 /*Beginning of first half of page*/
 #logo-section{ 
     display: flex;
-    flex: 1 1 33vw;
-    min-width: 320px;
-
     flex-direction: column;
     align-items: center;
+    flex: 1 1 33vw;
+    min-width: 320px;
     background-image: url(images/fire-edit.jpeg);
     background-size: cover;
     background-position: center center;
@@ -30,10 +29,8 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
     position: relative;
-    top: 70px; /*154px*/ /*130px*/
-    
+    top: 70px;
     height: 100px;
     width: 100%;
     background-color: rgb(218,51,48, 0.5);
@@ -53,7 +50,7 @@ html, body{
     float: left;
 }
 
-footer{
+footer.photo-credits{
     position: absolute;
     top: 97%;
     color: white;
@@ -67,10 +64,13 @@ a{
 #sign-up-sheet-section{ 
     display: flex;
     flex-direction: column;
-    flex: 1 1 67vw;
-    min-height: 50vh; /*70vh*/
-
     align-items: center;
+    flex: 1 1 67vw;
+    min-height: 50vh;
+
+    --sign-up-sheet-font-color: black;
+    --bottom-partial-border: linear-gradient(rgba(218, 51, 48, 0.3) 0 0) bottom/ 500px 2px no-repeat, white;
+    --sign-up-sheet-background-color: white;
 }
 
 .wrapper{
@@ -81,53 +81,48 @@ a{
 }
 
 .section-1{
-    flex: 0.4 1 0; /*0.6*/
-    
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    color: black;
-    background: linear-gradient(rgba(218, 51, 48, 0.3) 0 0) bottom/ 500px 2px no-repeat, white;
+    flex: 0.4 1 0;
     padding-left: 100px;
     padding-right: 100px;
+    background: var(--bottom-partial-border);
+    background-color: var(--sign-up-sheet-background-color);
+    color: var(--sign-up-sheet-font-color);
 }
 
 .section-2{
-    flex: 1 1 0;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    color: black;
-    background: linear-gradient(rgba(218, 51, 48, 0.3) 0 0) bottom/ 500px 2px no-repeat, white; 
+    flex: 1 1 0;
+    background: var(--bottom-partial-border);
+    background-color: var(--sign-up-sheet-background-color);
+    color: var(--sign-up-sheet-font-color);
 }
 
 .section-3{
-    flex: 0.7 1 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    color: black;
+    flex: 0.7 1 0;
+    background-color:  var(--sign-up-sheet-background-color);
+    color: var(--sign-up-sheet-font-color);
 }
 
 p{
-    max-width: 1000px;
     font-size: 1.2rem;
     font-weight: bold;
-    max-width: 700px;
-    margin: 0;
     text-align: center;
+    margin: 0;
 }
 
 dd{
+    font-size: 1.2rem;
     margin-left: 0;
     padding-bottom: 15px;
-    font-size: 1.2rem;
 }
 
 form{
@@ -145,11 +140,13 @@ input{
     width: 200px;
 }
 
+/*Positioning of form rows*/
 div[class*=row]{
     display: flex;
     gap: 50px;
 }
 
+/*Positioning the form label over the input*/
 span[class*=form]{
     display: flex;
     flex-direction: column;
@@ -175,12 +172,13 @@ button:active{
     background-color: #ff4e41;
 }
 
-.website-credits{
-    color: black;
+footer.website-credits{
+    color: var(--sign-up-sheet-font-color);
     text-align: center;
+    background-color: var(--sign-up-sheet-background-color);
 }
 
-.website-credits a{
+footer.website-credits a{
     color: black;
 }
 
