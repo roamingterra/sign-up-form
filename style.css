@@ -178,7 +178,9 @@ input:focus{
 }
 
 #password:invalid::after{
-    content: 'Passwords do not match';
+    display: inline-block;
+    content: "Password needs to be at least 8 characters";
+    font-size: 1rem;
 }
 
 /*Positioning of form rows*/
@@ -203,6 +205,7 @@ button{
     color: white;
     font-size: 1.2rem;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover{

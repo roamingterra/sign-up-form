@@ -24,21 +24,21 @@
             </div>
             <div class="section-2">
                 <dd>Let's do this!</dd>
-                <form class="submission-form" action="script.js" method="get">
+                <form id="submission-form" action="script.js" method="get">
                     <div class="row-1">
                         <span class="form-first-name">
                             <label for="first_name">FIRST NAME</label>
-                            <input type="text" id="first_name">
+                            <input type="text" id="first_name" required>
                         </span>
                         <span class="form-last-name">
                             <label for="last_name">LAST NAME</label>
-                            <input type="text" id="last_name">
+                            <input type="text" id="last_name" required>
                         </span>
                     </div>
                     <div class="row-2">
                         <span class="form-email">
                             <label for="email">EMAIL</label>
-                            <input type="email" id="email">
+                            <input type="email" id="email" required>
                         </span>
                         <span class="form-phone-number">
                             <label for="phone_number">PHONE NUMBER</label>
@@ -48,17 +48,18 @@
                     <div class="row-3">
                         <span class="form-password">
                             <label for="password">PASSWORD</label>
-                            <input type="password" id="password">
+                            <input type="password" id="password" required minlength="8">
                         </span>
                         <span class="form-password-confirmation">
                             <label for="password_confirmation">CONFIRM PASSWORD</label>
-                            <input type="password" id="password_confirmation">
+                            <input type="password" id="password_confirmation" required>
                         </span>
                     </div>
+                    <div class="message"></div>
                 </form>
             </div>
             <div class="section-3">
-                <button type="submit">Create Account</button>
+                <button type="submit" id="submit" form="submission-form" onclick="checkPassword()">Create Account</button>
                 <div>Already have an account? Log in</div>
             </div>
             <footer class="website-credits">
@@ -67,5 +68,6 @@
                 </footer>
         </div>
     </span>
+    <script src="./script.js"></script>
 </body>
 </html>
