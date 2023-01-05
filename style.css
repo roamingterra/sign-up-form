@@ -173,14 +173,8 @@ input:focus{
     box-shadow:1px 1px 5px grey;
 }
 
-#password:invalid, #password_confirmation:invalid{
+input:focus:invalid{ 
     border-color: red;
-}
-
-#password:invalid::after{
-    display: inline-block;
-    content: "Password needs to be at least 8 characters";
-    font-size: 1rem;
 }
 
 /*Positioning of form rows*/

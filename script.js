@@ -1,18 +1,14 @@
-function checkPassword(){
-    let password = document.getElementById('password').value;
-    let passwordConfirmation = document.getElementById('password_confirmation').value;
-    let message = document.getElementsByClassName('message').value;
-    let submit = document.getElementById('submit');
-    console.log(password);
-    console.log(passwordConfirmation);
-    console.log(password === passwordConfirmation)
+let password = document.getElementById('password');
+let passwordConfirmation = document.getElementById('password_confirmation');
 
-    if(password !== passwordConfirmation){
-        submit.disabled = true;
-        message.textContent = "Passwords do not match";
-        message.style.color = "red";
+function checkPassword(){
+    if(password.value !== passwordConfirmation.value){
+        passwordConfirmation.setCustomValidity("Passwords don't match");
     }
     else{
-        submit.disabled = false;
+        passwordConfirmation.setCustomValidity("");
     }
 }
+
+password.onchange = checkPassword();
+passwordConfirmation.onkeyup = checkPassword();
